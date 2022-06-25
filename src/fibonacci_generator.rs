@@ -11,7 +11,7 @@ pub mod fibonacci_generator {
 
             io::stdin().read_line(&mut number).expect("Failed to read line");
 
-            let number: u64 = match number.trim().parse() {
+            let number: u128 = match number.trim().parse() {
                 Ok(num) => {
                     if num == 0 {
                         println!("It is not a valid integer!");
@@ -24,7 +24,7 @@ pub mod fibonacci_generator {
                     continue
                 }
             };
-            let mut previous: u64 = 1;
+            let mut previous: u128 = 1;
             let mut current = 1;
 
             for _ in 3..=number {
